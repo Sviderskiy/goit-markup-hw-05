@@ -7,7 +7,7 @@
   --accent-color: #2196f3;
   --second-background-color: #e5e5e5;
   --svg-gray-color: #afb1b8;
-  --main-property-of-hover-focus: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --mainpropertyofcubic-timeduration: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 *,
@@ -150,7 +150,7 @@ img {
   padding-bottom: 32px;
   display: block;
   color: var(--title-text-color);
-  transition: var(--main-property-of-hover-focus);
+  transition: color var(--mainpropertyofcubic-timeduration);
 }
 
 .nav:hover,
@@ -181,7 +181,7 @@ img {
   color: var(--primary-text-color);
   display: flex;
   align-items: center;
-  transition: var(--main-property-of-hover-focus);
+  transition: color var(--mainpropertyofcubic-timeduration);
 }
 
 .header-link:active,
@@ -193,7 +193,8 @@ img {
 .envelope {
   fill: var(--primary-text-color);
   margin-right: 10px;
-  transition: var(--main-property-of-hover-focus);
+  transition: color var(--mainpropertyofcubic-timeduration),
+    fill var(--mainpropertyofcubic-timeduration);
 }
 
 .header-link:active .envelope,
@@ -205,7 +206,8 @@ img {
 .smartphone {
   fill: var(--primary-text-color);
   margin-right: 10px;
-  transition: var(--main-property-of-hover-focus);
+  transition: color var(--mainpropertyofcubic-timeduration),
+    fill var(--mainpropertyofcubic-timeduration);
 }
 
 .header-link:active .smartphone,
@@ -270,11 +272,11 @@ img {
   border: 0;
   margin-left: auto;
   margin-right: auto;
-  transition: var(--main-property-of-hover-focus);
+  transition: background-color var(--mainpropertyofcubic-timeduration);
 }
 
 .main-title-btn-txt {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   align-items: center;
@@ -441,7 +443,6 @@ img {
   box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
     0px 2px 1px rgb(0 0 0 / 20%);
 }
-
 .team-section-list-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -476,7 +477,7 @@ img {
 
 /* АБЗАЦ СЕКЦІЇ КОМАНДИ */
 .team-section-article {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
@@ -499,7 +500,6 @@ img {
   padding: 0px;
   list-style: none;
 }
-
 .social-list-item:not(:first-child) {
   margin-left: 10px;
 }
@@ -514,21 +514,21 @@ img {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: var(--main-property-of-hover-focus);
+  transition: color var(--mainpropertyofcubic-timeduration),
+    background-color var(--mainpropertyofcubic-timeduration);
 }
 
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
   color: var(--main-background-color);
-  cursor: pointer;
 }
 /* КІНЕЦЬ ПОСИЛАННЯ СОЦІАЛЬНИХ МЕРЕЖ */
 
 /* ІКОНКИ СОЦМЕРЕЖ */
 .link-icons {
   fill: currentColor;
-  transition: var(--main-property-of-hover-focus);
+  transition: fill var(--mainpropertyofcubic-timeduration);
 }
 
 .link-icons:hover,
@@ -572,7 +572,7 @@ img {
 /* КІНЕЦЬ ЕЛЕМЕНТУ СПИКУ СЕКЦІЇ ПОСТІЙНИХ КЛІЄНТІВ */
 
 /* ПОСИЛАННЯ СЕКЦІЇ ПОСТІЙНИХ КЛІЄНТІВ */
-.permanent-cliet-link {
+.permanent-client-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -580,20 +580,24 @@ img {
   height: 90px;
   border: 1px solid var(--svg-gray-color);
   border-radius: 4px;
-  color: var(--svg-gray-color);
-  transition: var(--main-property-of-hover-focus);
+  transition: border var(--mainpropertyofcubic-timeduration);
 }
 
-.permanent-cliet-link:hover,
-.permanent-cliet-link:focus {
+.permanent-client-link:hover,
+.permanent-client-link:focus {
   border: 1px solid var(--accent-color);
-  color: var(--accent-color);
+}
+
+.permanent-client-link:hover .permanent-client-icon,
+.permanent-client-link:focus .permanent-client-icon {
+  fill: var(--accent-color);
 }
 /* КІНЕЦЬ ПОСИЛАННЯ СЕКЦІЇ ПОСТІЙНИХ КЛІЄНТІВ */
 
 /* ІКОНКА СЕКЦІЇ ПОСТІЙНИХ КЛІЄНТІВ */
 .permanent-client-icon {
-  fill: currentColor;
+  fill: var(--svg-gray-color);
+  transition: fill var(--mainpropertyofcubic-timeduration);
 }
 /* КІНЕЦЬ ІКОНКИ СЕКЦІЇ ПОСТІЙНИХ КЛІЄНТІВ */
 
@@ -642,7 +646,7 @@ img {
 
 /*  КАРТА ФУТЕРА */
 .footer-link-map {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -704,7 +708,7 @@ img {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--main-background-color);
-  transition: var(--main-property-of-hover-focus);
+  transition: background-color var(--mainpropertyofcubic-timeduration);
 }
 
 .footer-social-link:hover,
@@ -784,7 +788,9 @@ img {
   border-radius: 4px;
   border: none;
   padding: 6px 22px;
-  transition: var(--main-property-of-hover-focus);
+  transition: background-color var(--mainpropertyofcubic-timeduration),
+    color var(--mainpropertyofcubic-timeduration),
+    box-shadow var(--mainpropertyofcubic-timeduration);
 }
 
 .filter-section-buttons:hover,
@@ -821,7 +827,7 @@ img {
 /* ПОСИЛАННЯ СПИСКУ КАРТОЧОК ПОРТФОЛІО */
 .portfolio-link {
   display: block;
-  transition: var(--main-property-of-hover-focus);
+  transition: box-shadow var(--mainpropertyofcubic-timeduration);
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
@@ -874,7 +880,7 @@ img {
   text-align: start;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(101%);
-  transition: var(--main-property-of-hover-focus);
+  transition: transform var(--mainpropertyofcubic-timeduration);
 }
 .portfolio-images-list-item:hover .portfolio-overlay,
 .portfolio-images-list-item:focus .portfolio-overlay {
@@ -920,8 +926,8 @@ img {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.2);
-  transition: opacity var(--main-property-of-hover-focus),
-    visibility var(--main-property-of-hover-focus);
+  transition: opacity var(--mainpropertyofcubic-timeduration),
+    visibility var(--mainpropertyofcubic-timeduration);
 }
 .backdrop.is-hidden {
   visibility: hidden;
@@ -945,7 +951,7 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transition: var(--main-property-of-hover-focus);
+  transition: transform var(--mainpropertyofcubic-timeduration);
 }
 /* КІНЕЦЬ МОДАЛЬНОГО ВІКНА */
 
